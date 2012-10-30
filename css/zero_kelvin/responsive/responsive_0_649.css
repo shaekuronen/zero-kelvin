@@ -1,0 +1,28 @@
+
+@media (max-width: 649px) {
+
+  .style-guide-container {
+    width: 100%;
+    padding: 0;
+  }
+  .style-guide-templates-container {
+    position: static;
+    margin: 0;
+  }
+  .style-guide-column {
+    float: none;
+    margin: 0 auto;
+  }
+  .style-guide-header {
+    margin: 0 0 1em 0;
+    padding: 0 0 .5em 0;
+
+  }
+  .style-guide-menu-heading {
+    padding: .5em 0 0 0;
+  }
+  .style-guide-menu-list-item {
+    padding: .5em .5em 0 .5em;
+  }
+
+}

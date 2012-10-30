@@ -1,0 +1,38 @@
+
+/* AUDIO & VIDEO */
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; 
+  display: inline-block; 
+  *display: inline; 
+  *zoom: 1; 
+}
+audio:not([controls]) { 
+  display: none; 
+}
+/* END AUDIO & VIDEO */
+
+/* IMAGES */
+img, 
+figure, 
+figcaption,
+canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  display: block;
+}
+img { 
+  border: 0; 
+  -ms-interpolation-mode: bicubic; 
+  vertical-align: middle; 
+}
+svg:not(:root) { 
+  overflow: hidden; 
+}
+/* END IMAGES */

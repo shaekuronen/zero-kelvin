@@ -1,0 +1,463 @@
+/* FORMS */
+fieldset, form, label, legend, output {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; 
+}
+label { 
+  display: block; 
+}
+legend { 
+  *margin-left: -7px; 
+  white-space: normal; 
+}
+/* forms - inputs */
+/*input,
+input:focus,
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='url'],
+input[type='tel'],
+input[type='color']*/
+input,
+input:focus/*,
+input[type],
+input[type]:focus*/ {  
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  outline: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+  width: 100%;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  /* bc firefox will not allow line-height to be set for form inputs */
+  /* see multi-year discussion https://bugzilla.mozilla.org/show_bug.cgi?id=349259 */
+  /* and http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/ for explanation of fix */
+  /* and jar:file:///Applications/Firefox.app/Contents/MacOS/omni.ja!/chrome/toolkit/res/forms.css */
+  /* to keep x-browser with firefox do not change line-height */
+  /* use height attribute to set height of input */
+  line-height: 1.2em;
+  height: 1.5em;
+} 
+input:invalid { 
+  background-color: #ccc; 
+}
+input[disabled] { 
+  cursor: default;
+  color: #000; 
+} 
+input::-moz-focus-inner { 
+  border: 0; 
+  padding: 0; 
+}
+input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type='search']:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+  outline: 1px solid #ccc;
+  -moz-outline: 1px solid #ccc;
+  -webkit-focus-ring-color: #ccc;
+  -moz-outline-radius: 0;
+  border: 1px solid #ccc;
+} 
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  /*-webkit-appearance: textfield;*/
+  /*-moz-appearance: textfield;*/  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'] { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*  background: url('../images/arrow.png') no-repeat 131px 4px; */  
+  background: url('../images/down_arrow.svg') no-repeat 99% center;
+}
+/* borders rendered inconsistently input type file so use default styling */
+input[type='file'] {
+  border: 0;
+  outline: 0;
+  width: auto;
+  width: 100%;
+  cursor: pointer;
+}
+.lt-ie10 input[type='file'] {
+  border: 1px solid #000;
+}
+/* see http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/ */
+input[type='radio'] {  
+  /*-webkit-appearance: radio;*/
+  /*-moz-appearance: radio;*/  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  width: 1em;
+  height: 1em;
+  border-radius: .5em;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+.lt-ie10 input[type='radio'] {
+  border: 0;
+  outline: 0;
+  height: 1.2em;
+  width: 1.2em;
+}
+input[type='radio']:checked,
+input[type='radio']:active {
+  outline: 0;
+}
+input[type='radio']:checked:after {
+  content: '\2022';
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: #000;
+  font-size: 2em;
+}
+input[type='checkbox'] { 
+  /*-webkit-appearance: checkbox;*/
+  /*-moz-appearance: checkbox; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+.lt-ie10 input[type='checkbox'] {
+  border: 0;
+}
+input[type='checkbox']:checked,
+input[type='checkbox']:active {
+  outline: 0;
+}
+input[type='checkbox']:checked:after {
+  content: 'X';
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: #000;
+  font-size: 1em;
+}
+/* input[type='search']:hover, */
+input[type='search'] { 
+  /*-webkit-appearance: searchfield;*/
+  /*-moz-appearance: searchfield; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  border: 1px solid #000;
+  outline: 0;
+/*  background: url('../images/arrow.png') no-repeat 131px 4px; */  
+  background: url('../images/search_icon.svg') no-repeat 99% center;
+}
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+::-webkit-input-placeholder {
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 14px;
+}
+:-moz-placeholder {  
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 14px; 
+}
+/* end forms - inputs */
+
+/* forms - select */
+select,
+select:focus {
+  /*-webkit-appearance: menulist;*/
+  /*-moz-appearance: menulist;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+/*  background: url('../images/arrow.png') no-repeat 131px 4px; */  
+  background: url('../images/down_arrow.svg') no-repeat 99% center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+  outline: 0;
+  border-radius: 0;
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  width: 100%;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  height: 1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+  /* bc firefox will not allow line-height to be set for form inputs */
+  /* see multi-year discussion https://bugzilla.mozilla.org/show_bug.cgi?id=349259 */
+  /* and http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/ for explanation of fix */
+  /* and jar:file:///Applications/Firefox.app/Contents/MacOS/omni.ja!/chrome/toolkit/res/forms.css */
+  /* to keep x-browser with firefox do not change line-height */
+  /* use height attribute to set height of inputs */
+  line-height: 1.1em;
+}
+.lt-ie10 select,
+.lt-ie10 select:focus {
+  padding: .1em 0;
+  height: 1.6em;
+}
+/* workaround for a firefox bug */
+/* https://bugzilla.mozilla.org/show_bug.cgi?id=649849 */
+@-moz-document url-prefix() {
+  select,
+  select:focus,
+  select:checked {
+    text-indent: -2px;
+    height: 1.6em;
+    padding: .25em 0 .1em 0;
+  }
+}
+/* prevent dotted line on focus in firefox */
+select:focus {
+  color: #000;
+  color: rgba(0,0,0,0);
+  text-shadow: 0 0 0 #000;
+}
+.no-textshadow select:focus {
+  color: #000;
+}
+/* end prevent dotted line in firefox*/
+optgroup,
+optgroup:focus,
+option,
+option:focus,
+option:checked {
+  /*-webkit-appearance: menulist-button;*/
+  /*-moz-appearance: menulist-button;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  border: 1px solid #000;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #000;
+  text-shadow: none;
+  line-height: 1.2em;
+}
+/* end forms - select */
+
+/* forms - progress bar */
+/* see http://www.html5rocks.com/en/tutorials/forms/html5forms/ */
+/* see http://blog.oldworld.fr/index.php?post/2011/07/The-HTML5-progress-element-in-Firefox */
+progress { 
+  -webkit-appearance: progress-bar;
+  -moz-appearance: progress-bar;
+  border: 1px solid black; 
+  width: 100%;
+}
+progress::-webkit-progress-bar,
+progress::-moz-progress-bar { 
+  background-color: #ccc; 
+}
+progress::-webkit-progress-value,
+progress::-moz-progress-value { 
+  background-color: #000; 
+}
+progress:indeterminate {
+  background-color: #000;
+}
+progress:indeterminate::-moz-progress-bar,
+progress:indeterminate::-webkit-progress-bar {
+  background-color: #ccc;
+}
+/* end forms - progress bar */
+
+/* forms - meter */
+meter {
+  -webkit-appearance: meter;
+  -moz-appearance: meter;
+  border: 1px solid black; 
+  width: 100%;
+}
+/* end forms - meter */
+
+/* forms - textarea */
+textarea { 
+  line-height: 1.5; 
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  outline: 0;
+  border-radius: 0;
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  width: 100%;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  overflow: auto;  
+  resize: vertical;
+  /* looks like placeholder text height excluded from calculation of height*/
+  /* so 129 + 21px line-height gives 150 arbitrarily making the textarea 2:1 aspect ratio */
+  min-height: 129px;
+  vertical-align: top;
+  *vertical-align: middle;
+}
+textarea:valid {
+  background-color: #fff;
+}
+textarea:invalid { 
+  background-color: #ccc; 
+}
+textarea:focus {
+  outline: 1px solid #ccc;
+  -moz-outline: 1px solid #ccc;
+  -webkit-focus-ring-color: #ccc;
+  -moz-outline-radius: 0;
+  border: 1px solid #ccc;
+} 
+/* end forms - textarea */
+/* END FORMS */
+
+/* BUTTONS */
+button,
+button:active,
+button:focus { 
+  /* -webkit-appearance: button; */
+  /* -moz-appearance: button; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  outline: 0;
+  border-radius: 0;
+  -moz-box-shadow:    0 0 0 0 #fff;
+  -webkit-box-shadow: 0 0 0 0 #fff;
+  box-shadow:         0 0 0 0 #fff;
+  cursor: pointer; 
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 14px;
+  *overflow: visible; 
+  *vertical-align: middle;
+}
+button:hover {
+  background-color: #ccc;
+}
+button[disabled] { 
+  cursor: default;
+}
+button::-moz-focus-inner { 
+  border: 0; 
+  padding: 0; 
+}
+input[type='button'], 
+input[type='reset'], 
+input[type='submit'] {  
+  /*-webkit-appearance: push-button; */
+  /*-moz-appearance: push-button; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  width: auto;
+  cursor: pointer;
+  *overflow: visible; 
+}
+input[type='button']:focus, 
+input[type='reset']:focus, 
+input[type='submit']:focus {
+  outline: 0;
+  -moz-outline: 0;
+  -webkit-focus-ring-color: #000;
+  -moz-outline-radius: 0;
+  border: 1px solid 0;
+}
+input[type='button']:hover, 
+input[type='reset']:hover, 
+input[type='submit']:hover {
+  background-color: #ccc;
+}
+/* END BUTTONS 

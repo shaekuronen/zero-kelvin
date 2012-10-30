@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Zero Kelvin Style Guide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <!-- html5 shim -->
+  <!--[if lt IE 9]>
+  <script src="js/libs/html5shiv.js"></script>
+  <![endif]-->
+  <!-- end html5 shim -->
+  
+  <!-- css stylesheets -->
+  <link id="css_reset" rel="stylesheet" href="css/zero_kelvin/zero_kelvin_boilerplate.css">
+  <link rel="stylesheet" href="css/zero_kelvin/zero_kelvin_style_guide.css">
+  <!-- end css stylesheets -->
+
+  <!-- responsive stylesheets -->
+  <link rel="stylesheet" href="css/zero_kelvin/responsive/responsive_0_649.css">
+  <link rel="stylesheet" href="css/zero_kelvin/responsive/responsive_650_999.css">
+  <link rel="stylesheet" href="css/zero_kelvin/responsive/responsive_1000_1349.css">
+  <link rel="stylesheet" href="css/zero_kelvin/responsive/responsive_1350_infinity.css">
+  <!-- end responsive stylesheets -->
+
+  <!-- cross browser audio and video -->
+  <script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+  <!-- feature detect with modernizr -->
+  <script src="js/libs/modernizr.js"></script>
+  
+  <!-- google analytics -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <!-- end google analytics -->
+
+</head>
+<body>
+
+  <!-- header -->
+  <header class="style-guide-header">
+    <div class="style-guide-header-inner-wrapper">
+      <details id="style-guide-details-resets" class="style-guide-details">
+        <summary>Reset</summary>
+        <ul class="style-guide-menu-list">
+          <li class="style-guide-menu-list-item" id="no-reset">No Reset</li>
+          <li class="style-guide-menu-list-item" id="meyers">Eric Meyers</li>
+          <li class="style-guide-menu-list-item" id="html5-doctor">HTML5 Doctor</li>
+          <li class="style-guide-menu-list-item" id="normalize">Normalize</li>
+          <li class="style-guide-menu-list-item" id="h5bp">HTML5 Boilerplate</li>
+          <li class="style-guide-menu-list-item" id="bootstrap">Twitter Bootstrap</li>
+          <li class="style-guide-menu-list-item" id="zero-kelvin-reset">Zero Kelvin Reset</li>
+          <li class="style-guide-menu-list-item" id="zero-kelvin-boilerplate">Zero Kelvin Boilerplate</li>
+        </ul> 
+      </details>
+      <details id="style-guide-details-html-elements" class="style-guide-details">
+        <summary>HTML Element</summary>
+        <ul class="style-guide-menu-list">
+
+          <!-- typography -->
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-heading">Headings</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-anchor">Links</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-strong">Strong</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-emphasis">Emphasis</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-superscript">Superscript</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-citation">Citation</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-abbreviation">Abbreviation</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-blockquote">Blockquote</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-pre">Pre</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-code">Code</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-mark">Mark</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-time">Time</li>
+          
+          <!-- structure -->
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-paragraph">Paragraphs</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-definition">Term &#43; Definition</li>       
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-ordered-list">Ordered List</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-unordered-list">Unordered List</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-details">Details &#43; Summary</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-hr">Horizontal Row</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-table">Table</li>
+
+          <!-- form elements -->
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-form">Form</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-text-input">Text Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-text-input-autofocus">Text - Autofocus</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-text-input-required">Text - Required</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-text-input-disabled">Text - Disabled</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-input-email-input">Email Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-password-input">Password Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-search-input">Search Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-datetime-input">Datetime Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-datetime-local">Datetime Local</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-date">Date Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-month">Month Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-time-input">Time Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-week-input">Week Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-number-input">Number Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-number-input-min">Number - Min</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-number-input-max">Number - Max</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-url-input">URL Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-tel-input">Phone Number</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-color-input">Color Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-range-input">Range Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-file-input">File Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-textarea">Textarea</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-textarea-max">Textarea - Max</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-progress">Progress</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-indeterminate-progress">Indeterminate Progress</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-meter">Meter</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-datalist">Datalist</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-select">Select</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-radio-input">Radio Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-checkbox-input">Checkbox Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-button-input">Button Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-submit-input">Submit Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-reset-input">Reset Input</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-button">Button</li>
+
+          <!-- media -->
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-image">Image</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-figure">Figure &#43; Figcaption</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-canvas">Canvas</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-video">Video</li>
+          <li class="style-guide-menu-list-item html-element-item" id="style-guide-audio">Audio</li>
+
+        </ul> 
+      </details>
+    </div>
+    
+<!-- 
+    <h1 class="style-guide-menu-heading" style="display:inline-block;margin-right:20px;">Reset <span style="font-size:80%">&nbsp;&#x25BC;</span></h1>
+    <h1 class="style-guide-menu-heading" style="display:inline-block;">HTML Element <span style="font-size:80%">&nbsp;&#x25BC;</span></h1>
+    <ul class="style-guide-menu-list">
+      <li class="style-guide-menu-list-item" id="no-reset">No Reset</li>
+      <li class="style-guide-menu-list-item" id="meyers">Eric Meyers</li>
+      <li class="style-guide-menu-list-item" id="html5-doctor">HTML5 Doctor</li>
+      <li class="style-guide-menu-list-item" id="normalize">Normalize</li>
+      <li class="style-guide-menu-list-item" id="h5bp">HTML5 Boilerplate</li>
+      <li class="style-guide-menu-list-item" id="bootstrap">Twitter Bootstrap</li>
+      <li class="style-guide-menu-list-item" id="zero-kelvin-reset">Zero Kelvin Reset</li>
+      <li class="style-guide-menu-list-item" id="zero-kelvin-boilerplate">Zero Kelvin Boilerplate</li>
+    </ul>
+ -->
+    <!-- nav -->
+<!--     <nav class="style-guide-nav"> 
+      <h1 class="style-guide-nav-heading">Jump to HTML Element</h1>
+      <ul class="style-guide-nav-list">
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-headings">Headings</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-links">Links</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-paragraphs">Paragraphs</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-term-list">Term List (term &#43; definition)</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-ordered-list">Ordered List</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-unordered-list">Unordered List</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-button">Button</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-image-tag">Image</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-figure">Figure &#43; Figcaption</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-video">Video</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-audio">Audio</a></li> 
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-form-elements">Form Elements</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-superscript">Superscript &amp; Subscript</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-citation">Citation</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-abbreviation">Abbreviation</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-tables">Tables</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-blockquote">Blockquote</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-time">Time</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-mark">Mark (highlight)</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-hr">Horizontal Row</a></li>
+        <li class="style-guide-nav-list-item"><a class="style-guide-nav-link" href="#style-guide-canvas">Canvas</a></li>
+      </ul>
+    </nav> -->
+    <!-- end nav -->
+
+  </header>
+  <!-- end header -->
+
+  <!-- content container -->
+  <section class="style-guide-container">
+
+    <!-- main content -->
+    <section id="style-guide-templates-container" class="style-guide-templates-container" role="main">
+
+      <!-- css for typography -->
+      <section class="style-guide-column style-guide-typography" id="style-guide-typography"></section>
+      <!-- end css for typography -->
+
+      <!-- css for structural elements -->
+      <section class="style-guide-column style-guide-structure" id="style-guide-structure"></section>
+      <!-- end css for structural elements -->
+
+      <!-- css for form elements -->
+      <section class="style-guide-column style-guide-form-elements" id="style-guide-form-elements"></section>
+      <!-- end css for form elements -->
+
+      <!-- css for media -->
+      <section class="style-guide-column style-guide-media" id="style-guide-media"></section>
+      <!-- end css for media -->
+
+      <!-- <div style="clear:both;height:0;line-height:0;color:transparent;">.</div> -->
+      
+    </section>
+    <!-- end main content -->
+    
+    <footer></footer>
+
+  </section>
+  <!-- end content container -->
+
+  <!-- javascript -->
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+  <!-- end jquery -->
+
+  <!-- masonry -->
+  <script src="js/libs/masonry.min.js"></script>
+  <!-- end masonry -->
+
+  <!-- imagesloaded -->
+  <script src="js/libs/jquery.imagesloaded.js"></script>
+  <!-- end imagesloaded -->
+
+  <!-- details element polyfill -->
+  <script src="js/libs/jquery.details-1.6.min.js"></script>
+  <!-- end details element polyfill -->
+
+  <!-- site scripts -->
+  <script src="js/scripts.js"></script>
+  <!-- end site scripts -->
+
+  <!-- end javascript -->
+
+</body>
+</html>

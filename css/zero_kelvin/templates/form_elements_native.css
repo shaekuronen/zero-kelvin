@@ -1,0 +1,65 @@
+
+:focus {
+  border: inherit;
+  outline: inherit;
+}
+
+fieldset,
+legend,
+form {
+  outline: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  border: 1px solid #000;
+  outline: 0;
+}
+
+input[type='file'] {
+  border: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  height: 1.5em;
+  color: #000;
+  font-family: sans-serif; 
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+
+progress,
+meter {
+  width: 100%;
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  width: auto;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  *overflow: visible; 
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}

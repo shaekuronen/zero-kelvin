@@ -1,0 +1,93 @@
+/* STRUCTURE */
+/* make padding behave in a rational way per Paul Irish */
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+html, body, div, span, object, iframe, embed, article, aside, details, footer, header, hgroup, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, footer, header, hgroup, nav, section, embed, details, summary, progress, meter { 
+  display: block; 
+}
+/* see http://html5doctor.com/the-details-and-summary-elements/ */
+details,
+summary {
+  cursor: pointer;
+}
+/* possible css for details + summary tags */
+/*details[open] {
+  background-color: #ccc;
+  color: #000;
+}
+summary::-webkit-details-marker {
+  color: #ccc;
+}
+details[open] > summary::-webkit-details-marker {
+  color: #000;
+}*/
+hr { 
+  display: block; 
+  height: 1px; 
+  border: 0; 
+  border-top: 1px solid #000; 
+  margin: 0; 
+  padding: 0; 
+}
+/*hmm wtf to do with this*/
+:focus {
+  border: 0;
+  outline: 0;
+}
+/* END STRUCTURE */
+
+/* LISTS */
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol, ul {
+  list-style: none;
+  list-style-image: none;
+}
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+dfn { 
+  font-style: normal; 
+}
+/* END LISTS */
+
+/* TABLES */
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0;
+  border: 1px solid #000; 
+}
+th {
+  border: 1px solid #000;
+}
+td { 
+  vertical-align: top; 
+  border: 1px solid #000;
+}
+/* END TABLES */
