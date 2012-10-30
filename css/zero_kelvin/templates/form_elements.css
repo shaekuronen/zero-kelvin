@@ -65,8 +65,9 @@ input[type]:focus*/ {
 input:invalid { 
   background-color: #ccc; 
 }
-input[disabled] { 
-  cursor: default;
+input[disabled],
+input[readonly] { 
+  cursor: not-allowed;
   color: #000; 
 } 
 input::-moz-focus-inner { 
@@ -261,6 +262,10 @@ select:focus {
   padding: .1em 0;
   height: 1.6em;
 }
+select[disabled], 
+select[disabled]  {
+  cursor: not-allowed;
+}
 /* workaround for a firefox bug */
 /* https://bugzilla.mozilla.org/show_bug.cgi?id=649849 */
 @-moz-document url-prefix() {
@@ -382,6 +387,10 @@ textarea:focus {
   -moz-outline-radius: 0;
   border: 1px solid #ccc;
 } 
+textarea[disabled], 
+textarea[readonly] {
+  cursor: not-allowed;
+}
 /* end forms - textarea */
 /* END FORMS */
 
@@ -418,7 +427,7 @@ button:hover {
   background-color: #ccc;
 }
 button[disabled] { 
-  cursor: default;
+  cursor: not-allowed;
 }
 button::-moz-focus-inner { 
   border: 0; 
