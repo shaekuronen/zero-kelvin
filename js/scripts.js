@@ -1,6 +1,7 @@
 ;(function($) {
 
   // load html templates
+  $('#style-guide-header').load('templates/style_guide_header.html');
   $('#style-guide-typography').load('templates/style_guide_typography.html');
   $('#style-guide-structure').load('templates/style_guide_structure.html');
   $('#style-guide-form-elements').load('templates/style_guide_form_elements.html');
@@ -25,38 +26,6 @@
         });
       });
     }
-
-    // // if the screen size is between 1000px and 1399px
-    // if ( Modernizr.mq('only all and (min-width: 1000px) and (max-width: 1399px)') ) {
-
-    //   // masonry
-    //   var $container = $('#style-guide-templates-container');
-    //   $container.imagesLoaded(function(){
-
-    //     $container.masonry({
-    //       columnWidth: 325,
-    //       itemSelector: '.style-guide-column',
-    //       gutterWidth: 0,
-    //       isResizable: true
-    //     });
-    //   });
-    // }
-
-    // // if the screen size is greater than 1400px
-    // if ( Modernizr.mq('only all and (min-width: 1400px)') ) {
-
-    //   // masonry
-    //   var $container = $('#style-guide-templates-container');
-    //   $container.imagesLoaded(function(){
-
-    //     $container.masonry({
-    //       columnWidth: 350,
-    //       itemSelector: '.style-guide-column',
-    //       gutterWidth: 0,
-    //       isResizable: true
-    //     });
-    //   });
-    // }
     // END MASONRY
 
     // DISABLE INPUT TYPE AUTOFOCUS ON TOUCH DEVICES
@@ -67,11 +36,6 @@
     // END DISABLE INPUT TYPE AUTOFOCUS ON TOUCH DEVICES
 
     // SCROLL TO AN HTML ELEMENT
-    // set height of footer so that all elements can scroll to top of page
-    // var window_height = $(window).height();
-    // $('footer').css('height', window_height);
-
-    
     $('.html-element-item').click(function(e) {
 
       var the_id = $(this).attr('id'),
