@@ -11,7 +11,7 @@
 
     // MASONRY
     // if the screen size is between 650px and 999px
-    if ( Modernizr.mq('only all and (min-width: 650px) and (max-width: 999px)') ) {
+    if ( Modernizr.mq('only all and (min-width: 650px)') ) {
 
       // masonry
       var $container = $('#style-guide-templates-container');
@@ -20,40 +20,43 @@
         $container.masonry({
           columnWidth: 325,
           itemSelector: '.style-guide-column',
-          gutterWidth: 0
+          gutterWidth: 0,
+          isResizable: true
         });
       });
     }
 
-    // if the screen size is between 1000px and 1399px
-    if ( Modernizr.mq('only all and (min-width: 1000px) and (max-width: 1399px)') ) {
+    // // if the screen size is between 1000px and 1399px
+    // if ( Modernizr.mq('only all and (min-width: 1000px) and (max-width: 1399px)') ) {
 
-      // masonry
-      var $container = $('#style-guide-templates-container');
-      $container.imagesLoaded(function(){
+    //   // masonry
+    //   var $container = $('#style-guide-templates-container');
+    //   $container.imagesLoaded(function(){
 
-        $container.masonry({
-          columnWidth: 325,
-          itemSelector: '.style-guide-column',
-          gutterWidth: 0
-        });
-      });
-    }
+    //     $container.masonry({
+    //       columnWidth: 325,
+    //       itemSelector: '.style-guide-column',
+    //       gutterWidth: 0,
+    //       isResizable: true
+    //     });
+    //   });
+    // }
 
-    // if the screen size is greater than 1400px
-    if ( Modernizr.mq('only all and (min-width: 1400px)') ) {
+    // // if the screen size is greater than 1400px
+    // if ( Modernizr.mq('only all and (min-width: 1400px)') ) {
 
-      // masonry
-      var $container = $('#style-guide-templates-container');
-      $container.imagesLoaded(function(){
+    //   // masonry
+    //   var $container = $('#style-guide-templates-container');
+    //   $container.imagesLoaded(function(){
 
-        $container.masonry({
-          columnWidth: 350,
-          itemSelector: '.style-guide-column',
-          gutterWidth: 0
-        });
-      });
-    }
+    //     $container.masonry({
+    //       columnWidth: 350,
+    //       itemSelector: '.style-guide-column',
+    //       gutterWidth: 0,
+    //       isResizable: true
+    //     });
+    //   });
+    // }
     // END MASONRY
 
     // DISABLE INPUT TYPE AUTOFOCUS ON TOUCH DEVICES
@@ -65,8 +68,8 @@
 
     // SCROLL TO AN HTML ELEMENT
     // set height of footer so that all elements can scroll to top of page
-    var window_height = $(window).height();
-    $('footer').css('height', window_height);
+    // var window_height = $(window).height();
+    // $('footer').css('height', window_height);
 
     
     $('.html-element-item').click(function(e) {
@@ -76,10 +79,6 @@
           page_margin_top = parseInt(page_margin_top);
           distance_to_element = $('#' + the_id + '-element').offset(),
           adjusted_distance_to_element = distance_to_element.top - page_margin_top + 10;
-
-          console.log(page_margin_top);
-          console.log(distance_to_element);
-          console.log(adjusted_distance_to_element);
       
       $('html, body').animate({
         scrollTop: adjusted_distance_to_element
@@ -148,48 +147,96 @@
   $('#no-reset').on('click', function() {
     $('#css_reset').attr('href','');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch reset to eric meyers
   $('#meyers').on('click', function() {
     $('#css_reset').attr('href','css/resets/meyers.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch reset to html5 doctor
   $('#html5-doctor').on('click', function() {
     $('#css_reset').attr('href','css/resets/html5_doctor.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch reset to normalize
   $('#normalize').on('click', function() {
     $('#css_reset').attr('href','css/resets/normalize.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch reset to html5 boilerplate
   $('#h5bp').on('click', function() {
     $('#css_reset').attr('href','css/resets/h5bp.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch reset to twitter bootstrap
   $('#bootstrap').on('click', function() {
     $('#css_reset').attr('href','css/resets/bootstrap.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch to zero kelvin reset
   $('#zero-kelvin-reset').on('click', function() {
     $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_reset.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // switch to zero kelvin boilerplate
   $('#zero-kelvin-boilerplate').on('click', function() {
     $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_boilerplate.css');
     $('#style-guide-details-resets').details('close');
+    $('#style-guide-templates-container').masonry({
+      columnWidth: 325,
+      itemSelector: '.style-guide-column',
+      gutterWidth: 0,
+      isResizable: true
+    });
   });
 
   // FIXES IOS SAFARI RESIZE ON ORIENTAION CHANGE BUG

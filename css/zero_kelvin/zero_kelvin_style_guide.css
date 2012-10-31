@@ -1,18 +1,18 @@
 
 
 .style-guide-container {
-  width: 1400px;
   margin: 3em auto 0;
 }
 .style-guide-templates-container {
   position: relative;
-  margin: 0 0 0 -25px;
+  /*margin: 0 0 0 -25px;*/
+  margin: 0;
 }
 .style-guide-column {
   width: 300px;
   float: left;
   padding: 0;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 25px;
 }
 .style-guide-divider {
   height: 1px; 
