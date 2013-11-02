@@ -43,7 +43,7 @@
           page_margin_top = parseInt(page_margin_top);
           distance_to_element = $('#' + the_id + '-element').offset(),
           adjusted_distance_to_element = distance_to_element.top - page_margin_top + 10;
-      
+
       $('html, body').animate({
         scrollTop: adjusted_distance_to_element
       }, 300);
@@ -81,7 +81,7 @@
       m=checkTime(m);
       s=checkTime(s);
       document.getElementById('display-time').innerHTML=h+":"+m+":"+s;
-      
+
       setTimeout(function() {
         startTime()
       },500);
@@ -107,101 +107,111 @@
 
   });
 
-  // switch reset to none
-  $('#no-reset').on('click', function() {
-    $('#css_reset').attr('href','');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
-    });
-  });
+  // attach click handles when document is ready
+  $(window).load(function() {
 
-  // switch reset to eric meyers
-  $('#meyers').on('click', function() {
-    $('#css_reset').attr('href','css/resets/meyers.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
-    });
-  });
+    console.log('this happened');
+    console.log('this also happened' + $('body').val());
 
-  // switch reset to html5 doctor
-  $('#html5-doctor').on('click', function() {
-    $('#css_reset').attr('href','css/resets/html5_doctor.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to none
+    $('#no-reset').on('click', function() {
+      $('#css_reset').attr('href','');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
-  });
 
-  // switch reset to normalize
-  $('#normalize').on('click', function() {
-    $('#css_reset').attr('href','css/resets/normalize.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to eric meyers
+    $('#meyers').on('click', function() {
+      console.log('meyers clicked');
+      $('#css_reset').attr('href','css/resets/meyers.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
-  });
 
-  // switch reset to html5 boilerplate
-  $('#h5bp').on('click', function() {
-    $('#css_reset').attr('href','css/resets/h5bp.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to html5 doctor
+    $('#html5-doctor').on('click', function() {
+      $('#css_reset').attr('href','css/resets/html5_doctor.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
-  });
 
-  // switch reset to twitter bootstrap
-  $('#bootstrap').on('click', function() {
-    $('#css_reset').attr('href','css/resets/bootstrap.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to normalize
+    $('#normalize').on('click', function() {
+      $('#css_reset').attr('href','css/resets/normalize.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
-  });
 
-  // switch to zero kelvin reset
-  $('#zero-kelvin-reset').on('click', function() {
-    $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_reset.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to html5 boilerplate
+    $('#h5bp').on('click', function() {
+      $('#css_reset').attr('href','css/resets/h5bp.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
-  });
 
-  // switch to zero kelvin boilerplate
-  $('#zero-kelvin-boilerplate').on('click', function() {
-    $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_boilerplate.css');
-    $('#style-guide-details-resets').details('close');
-    $('#style-guide-templates-container').masonry({
-      columnWidth: 325,
-      itemSelector: '.style-guide-column',
-      gutterWidth: 0,
-      isResizable: true
+    // switch reset to twitter bootstrap
+    $('#bootstrap').on('click', function() {
+      $('#css_reset').attr('href','css/resets/bootstrap.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
     });
+
+    // switch to zero kelvin reset
+    $('#zero-kelvin-reset').on('click', function() {
+      $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_reset.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
+    });
+
+    // switch to zero kelvin boilerplate
+    $('#zero-kelvin-boilerplate').on('click', function() {
+      $('#css_reset').attr('href','css/zero_kelvin/zero_kelvin_boilerplate.css');
+      $('#style-guide-details-resets').details('close');
+      $('#style-guide-templates-container').masonry({
+        columnWidth: 325,
+        itemSelector: '.style-guide-column',
+        gutterWidth: 0,
+        isResizable: true
+      });
+    });
+
   });
+  // attach click handles when document is ready
 
   // FIXES IOS SAFARI RESIZE ON ORIENTAION CHANGE BUG
   // listen for a gesture does not trigger for touch events (one fingertip vs 2 or more fingertips for gesture)
@@ -214,20 +224,20 @@
     if (window.orientation == 0 || window.orientation == 180) {
       // sets maximum scale to 1 which locks down user resizing but also prevents resize bug on orientation change
       document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0");
-    }        
-        
+    }
+
     // the device orientation is landscape
     else if (window.orientation == -90 || window.orientation == 90) {
       // sets maximum scale to 1 which locks down user resizing but also prevents resize bug on orientation change
       document.getElementById("viewport").setAttribute("content", "width=device-height, initial-scale=1.0, maximum-scale=1.0");
     } else {
-    }               
-  } 
+    }
+  }
 
   function start_touch_event() {
     // removes maximum scale 1 to allow user resizing
     document.getElementById("viewport").setAttribute("content", "width=device-width, minimum-scale=0.25, maximum-scale=1.6");
   }
   // END FIXES IOS SAFARI RESIZE ON ORIENTAION CHANGE BUG
-  
+
 }(jQuery));
